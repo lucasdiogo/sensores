@@ -42,6 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     motionManager = [CMMotionManager new];
+    passos = [CMPedometer new];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -92,5 +93,33 @@
         }];
     }
 }
+
+/*-(void)startPedometer:(double)interval{
+    
+    if(passos.isDi){
+        motionManager.deviceMotionUpdateInterval = interval;
+        [motionManager startDeviceMotionUpdates];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:interval repeats:YES block:^(NSTimer * timer){
+            CMDeviceMotion * motionData = motionManager.deviceMotion;
+            x = motionData.rotationRate.x;
+            
+            self.rotationXfield.text = [NSString stringWithFormat:@"%.2f", motionData.rotationRate.x];
+            self.rotationYfield.text = [NSString stringWithFormat:@"%.2f", motionData.rotationRate.y];
+            self.rotationZfield.text = [NSString stringWithFormat:@"%.2f", motionData.rotationRate.z];
+            
+            self.attitudeYawField.text = [NSString stringWithFormat:@"%.2f", motionData.attitude.yaw];
+            self.attitudeRollField.text = [NSString stringWithFormat:@"%.2f", motionData.attitude.roll];
+            self.attitudePitchField.text = [NSString stringWithFormat:@"%.2f", motionData.attitude.pitch];
+            
+            self.accelerationYfield.text = [NSString stringWithFormat:@"%.2f", motionData.userAcceleration.y];
+            self.accelerationXfield.text = [NSString stringWithFormat:@"%.2f", motionData.userAcceleration.x];
+            self.acceletarionZfield.text = [NSString stringWithFormat:@"%.2f", motionData.userAcceleration.z];
+            
+            
+            
+        }];
+    }
+} */
 
 @end
