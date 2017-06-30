@@ -13,6 +13,7 @@
 {
     CMMotionManager * motionManager;
     NSTimer * timer;
+    CMPedometer * passos;
 }
 
 

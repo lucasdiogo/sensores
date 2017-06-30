@@ -88,6 +88,7 @@
             self.acceletarionZfield.text = [NSString stringWithFormat:@"%.2f", motionData.userAcceleration.z];
             
             
+            
         }];
     }
 }
