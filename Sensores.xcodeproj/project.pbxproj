@@ -13,6 +13,7 @@
 		AE678D3A1F06709C00C61B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE678D381F06709C00C61B31 /* Main.storyboard */; };
 		AE678D3C1F06709D00C61B31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE678D3B1F06709D00C61B31 /* Assets.xcassets */; };
 		AE678D3F1F06709D00C61B31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE678D3D1F06709D00C61B31 /* LaunchScreen.storyboard */; };
+		AE678D481F0670B100C61B31 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE678D471F0670B100C61B31 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AE678D3B1F06709D00C61B31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE678D3E1F06709D00C61B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE678D401F06709D00C61B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE678D471F0670B100C61B31 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE678D481F0670B100C61B31 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				AE678D2E1F06709C00C61B31 /* Sensores */,
 				AE678D2D1F06709C00C61B31 /* Products */,
+				AE678D461F0670B100C61B31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				AE678D301F06709C00C61B31 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE678D461F0670B100C61B31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE678D471F0670B100C61B31 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

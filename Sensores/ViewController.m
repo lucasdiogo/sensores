@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    motionManager = [CMMotionManager new];
 }
 
 
@@ -25,5 +25,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mask - CoreMotion
+
+-(void)startDeviceMotion:(double)interval{
+    if(motionManager.isDeviceMotionAvailable){
+        motionManager.deviceMotionUpdateInterval = interval;
+        [motionManager startDeviceMotionUpdates];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:interval repeats:YES block:^(NSTimer * timer){
+            CMDeviceMotion * motionData = motionManager.deviceMotion;
+        }];
+    }
+}
 
 @end
